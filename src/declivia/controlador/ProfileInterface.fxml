@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="269.0" prefWidth="461.0" style="-fx-background-color: #E9E9E9;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="declivia.controlador.ProfileDecliviaController">
+   <children>
+      <AnchorPane prefHeight="67.0" prefWidth="461.0" style="-fx-background-color: #2D2D37;">
+         <children>
+            <Text fill="#e9e9e9" layoutX="143.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Perfil Del Usuario">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="37.0" fitWidth="38.0" layoutX="23.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Imagenes/account.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="userName" layoutX="177.0" layoutY="100.0" text="Nombre del usuario">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="email" layoutX="178.0" layoutY="137.0" text="example@example.com">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="79.0" layoutY="64.0" prefHeight="207.0" prefWidth="6.0" style="-fx-background-color: #2D2D37;" />
+      <Label fx:id="closeSession" layoutX="372.0" layoutY="243.0" onMouseClicked="#closeSess" text="Cerrar sesión" underline="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Label>
+      <Label layoutX="104.0" layoutY="100.0" text="Nombre:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="104.0" layoutY="137.0" text="Correo:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

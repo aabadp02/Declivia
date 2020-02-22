@@ -1,0 +1,45 @@
+#anchor{
+	-fx-background-color : linear-gradient(#47C9BE, #2BA6B7);
+}
+
+.data0.chart-pie{
+    -fx-pie-color: #CFDFDE; 
+}
+
+.data1.chart-pie{
+    -fx-pie-color: #ffffff;
+}
+
+.data2.chart-pie{
+    -fx-pie-color: #383E4A;
+}
+
+.data3.chart-pie{
+    -fx-pie-color: #007Fc3;
+}
+
+.data4.chart-pie{
+    -fx-pie-color: #2D2D37;
+}
+
+.data5.chart-pie{
+    -fx-pie-color: #383E4A;
+}
+.chart-pie {
+    -fx-border-width: 0px;
+}
+
+.default-color0.chart-area-symbol { -fx-background-color:    #383E4A,   #007Fc3; }
+
+.default-color0.chart-series-area-line { -fx-stroke:   #007Fc3; }
+
+.default-color0.chart-series-area-fill { -fx-fill: #007Fc31A;}
+
+.default-color0.chart-bar {-fx-bar-fill: #007Fc3A6;}
+
+.default-color0.chart-bar {-fx-stroke: #383E4A;}
+
+
+
+
+

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="275.0" prefWidth="490.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="declivia.controlador.ControladorInformacion">
+   <children>
+      <AnchorPane prefHeight="61.0" prefWidth="490.0" style="-fx-background-color: #2D2D37;">
+         <children>
+            <Text fill="WHITE" layoutX="29.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Información">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="38.0" fitWidth="33.0" layoutX="431.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Imagenes/infoBlanca.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="197.0" layoutX="10.0" layoutY="69.0" opacity="0.2" stroke="BLACK" strokeType="INSIDE" width="471.0" />
+      <AnchorPane fx:id="infoInicio" layoutX="17.0" layoutY="76.0" prefHeight="184.0" prefWidth="455.0" visible="false">
+         <children>
+            <Text fill="#2d2d37" layoutX="6.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pestaña inicial de la aplicación. Nada en esta ventana es interactivo">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text fill="#2d2d37" layoutX="7.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Los marcos de la aplicación están conformados por los diferentes">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text fill="#2d2d37" layoutX="7.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="botones con los que podremos movernos en la app.">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text fill="#2d2d37" layoutX="8.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="En ajustes podremos cambiar nombre, contraseña, email, modo y ">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text fill="#2d2d37" layoutX="8.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="hacer la copia de seguridad de la base de datos.">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text fill="#2d2d37" layoutX="9.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="En la esquina superior derecha vemos el símbolo del perfil. ">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text fill="#2d2d37" layoutX="9.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Podremos hacer click en él para ver nuestros datos y cerrar sesión">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+         </children></AnchorPane>
+      <AnchorPane fx:id="infoDestacado" layoutX="18.0" layoutY="76.0" prefHeight="184.0" prefWidth="455.0" visible="false" />
+      <AnchorPane fx:id="infoControl" layoutX="18.0" layoutY="76.0" prefHeight="184.0" prefWidth="455.0">
+         <children>
+            <Text fill="#2d2d37" layoutX="17.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Podemos ver en esta pestaña, 3 diagramas que conforman la">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text fill="#2d2d37" layoutX="17.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="aplicación. El primero muestra la actividad total del usuario">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text fill="#2d2d37" layoutX="17.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="desde que empezó a usarla. El de barras muestra el número de">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text fill="#2d2d37" layoutX="20.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ficheros que tiene cada asignatura y el de tarta muestra las">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text fill="#2d2d37" layoutX="20.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="puntuaciones que tiene cada asignatura para ser la elegida para">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text fill="#2d2d37" layoutX="20.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ser recomendada al usuario para que la estudie, en base a su">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text fill="#2d2d37" layoutX="20.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="actividad y a la dificultad de la asignatura">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+         </children></AnchorPane>
+      <AnchorPane fx:id="infoCursos" layoutX="17.0" layoutY="76.0" prefHeight="184.0" prefWidth="455.0" visible="false">
+         <children>
+            <Text fill="#2d2d37" layoutX="6.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="En esta pestaña se pueden ver los cursos, asignaturas y archivos">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text fill="#2d2d37" layoutX="7.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="del usuario. También se puede crear y borrar cualquiera de estos">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text fill="#2d2d37" layoutX="7.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="elementos haciendo uso de los botones situados sobre el panel">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text fill="#2d2d37" layoutX="7.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="de control o del símbolo de la papelera. Para ver lo que contiene">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text fill="#2d2d37" layoutX="8.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="basta con hacer click en el elemento al que queremos acceder">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text fill="#2d2d37" layoutX="9.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="El panel de control muestra información sobre el espacio de">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text fill="#2d2d37" layoutX="9.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="el disco principal del ordenador.">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

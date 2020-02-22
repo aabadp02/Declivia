@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="790.0" prefWidth="1260.0" style="-fx-background-color: #E9E9E9;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="declivia.controlador.InterfaceController">
+   <children>
+      <AnchorPane fx:id="viewColumn" prefHeight="790.0" prefWidth="200.0" style="-fx-background-color: #2D2D37;">
+         <children>
+            <ImageView fitHeight="76.0" fitWidth="66.0" layoutX="67.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Imagenes/logoDeclivia.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="inicio" layoutX="1.0" layoutY="106.0" onAction="#toInicio" prefHeight="70.0" prefWidth="199.0" text="Inicio" textFill="#e9e9e9">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="cursos" layoutX="1.0" layoutY="176.0" onAction="#toCursos" prefHeight="70.0" prefWidth="199.0" text="Cursos" textFill="#e9e9e9">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="destacado" layoutX="1.0" layoutY="246.0" onAction="#toDestacado" prefHeight="70.0" prefWidth="199.0" text="Destacado" textFill="#e9e9e9">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="control" layoutX="1.0" layoutY="316.0" onAction="#toControl" prefHeight="70.0" prefWidth="199.0" text="Control" textFill="#e9e9e9">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="botonUsuarios" layoutX="1.0" layoutY="176.0" onAction="#toUsers" prefHeight="70.0" prefWidth="199.0" text="Usuarios" textFill="#e9e9e9" visible="false">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children></AnchorPane>
+      <AnchorPane fx:id="settingsRow" layoutX="200.0" prefHeight="49.0" prefWidth="1061.0" style="-fx-background-color: #383E4A;">
+         <children>
+            <ImageView fx:id="profilePicture" fitHeight="25.0" fitWidth="25.0" layoutX="681.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Imagenes/usuario.png" />
+               </image>
+            </ImageView>
+            <JFXButton onAction="#settings" prefHeight="49.0" prefWidth="118.0" text="Ajustes" textFill="#e9e9e9">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton layoutX="118.0" prefHeight="49.0" prefWidth="118.0" text="Eventos" textFill="#e9e9e9">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Label fx:id="profileName" layoutX="332.0" layoutY="16.0" onMouseClicked="#profileAccount" text="Label" textFill="#e9e9e9">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+         </children></AnchorPane>
+      <AnchorPane fx:id="inicioPane" layoutX="200.0" layoutY="49.0" prefHeight="733.0" prefWidth="1061.0" style="-fx-background-color: #E9E9E9;">
+         <children>
+            <Text fill="#2d2d37" layoutX="37.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inicio">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+            <JFXTextField editable="false" focusColor="#2d2d37" focusTraversable="false" layoutX="25.0" layoutY="59.0" prefHeight="25.0" prefWidth="1010.0">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </JFXTextField>
+            <ImageView fitHeight="499.0" fitWidth="1010.0" layoutX="25.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Imagenes/escritorio.jpeg" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="25.0" layoutY="106.0" opacity="0.93" prefHeight="254.0" prefWidth="509.0" style="-fx-background-color: #2D2D37;">
+               <children>
+                  <Text fill="WHITE" layoutX="287.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" D E C L">
+                     <font>
+                        <Font name="System Bold" size="60.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="23.0" layoutY="360.0" prefHeight="351.0" prefWidth="1013.0" style="-fx-background-color: #E9E9E9;">
+               <children>
+                  <Text fill="#4cb9ac" layoutX="1.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Parche" underline="true">
+                     <font>
+                        <Font name="System Bold" size="29.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#2d2d37" layoutX="107.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1.0.0" underline="true">
+                     <font>
+                        <Font name="System Bold" size="29.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#2d2d37" layoutX="1.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Declivia funciona como una forma fácil de organizar tus cursos, asignaturas y archivos. Trabajamos día a día para que nuestros usuarios disfruten de una amplia gama de posibilidades que les ayuden a planificar sus tareas lectivas. En este parche tienes la posibilidad de agregar cursos, asignaturas y archivos para que comienzes con tus estudios. Estate atento porque muy pronto sacaremos nuevo contenido!" wrappingWidth="1013.0">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="69.0" fitWidth="80.0" layoutX="216.0" layoutY="208.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Imagenes/curso.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="69.0" fitWidth="80.0" layoutX="472.0" layoutY="204.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Imagenes/asignatura.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="69.0" fitWidth="80.0" layoutX="753.0" layoutY="211.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Imagenes/archivo.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="219.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cursos">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="457.0" layoutY="303.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Asignaturas">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="752.0" layoutY="303.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Archivos">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="527.0" layoutY="106.0" opacity="0.84" prefHeight="254.0" prefWidth="509.0" style="-fx-background-color: #6ecfc5;">
+               <children>
+                  <Text fill="#2d2d37" layoutX="7.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="I V I A">
+                     <font>
+                        <Font name="System Bold" size="60.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="702.0" prefHeight="39.0" prefWidth="1061.0" style="-fx-background-color: #383E4A;">
+               <children>
+                  <Text fill="WHITE" layoutX="400.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Declivia. Todos los derechos reservados (C) 2020" />
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="29.0" fitWidth="39.0" layoutX="1007.0" layoutY="45.0" onMouseClicked="#infoInicio" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Imagenes/informacion.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="cursosPane" layoutX="200.0" layoutY="49.0" prefHeight="733.0" prefWidth="1060.0" style="-fx-background-color: #E9E9E9;" visible="false">
+         <children>
+            <Text fx:id="cursosText" fill="#2d2d37" layoutX="37.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cursos">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+            <JFXTextField editable="false" focusColor="#2d2d37" focusTraversable="false" layoutX="25.0" layoutY="59.0" prefHeight="25.0" prefWidth="1010.0">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </JFXTextField>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e9e9e9" height="574.0" layoutX="25.0" layoutY="128.0" stroke="#2d2d37" strokeType="INSIDE" visible="false" width="1010.0" />
+            <Label fx:id="atras" layoutX="23.0" layoutY="100.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="609.0" layoutX="810.0" layoutY="108.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="225.0">
+               <fill>
+                  <LinearGradient endX="0.5047619047619047" endY="0.19999999999999998" startX="0.6" startY="0.9047619047619048">
+                     <stops>
+                        <Stop color="#2ba6b7" />
+                        <Stop color="#2ba6b7" offset="0.007662835249042145" />
+                        <Stop color="#48c7bac2" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <PieChart fx:id="pieChart" layoutX="823.0" layoutY="128.0" prefHeight="175.0" prefWidth="200.0" stylesheets="@../../StyleSheets/sytle.css" />
+            <Circle fill="#6ecfc5" layoutX="923.0" layoutY="216.0" radius="64.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Label fx:id="percentDiscUsed" layoutX="907.0" layoutY="193.0" text="30%" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Text fill="WHITE" layoutX="884.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Disco ocupado">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="847.0" layoutY="352.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Espacio:">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Text>
+            <Label fx:id="freeSpaceDisk" layoutX="979.0" layoutY="337.0" prefHeight="19.0" prefWidth="31.0" text="Label" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Text fill="WHITE" layoutX="847.0" layoutY="389.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Procesador:">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="978.0" layoutY="388.0" strokeType="OUTSIDE" strokeWidth="0.0" text="i7 9750H">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="847.0" layoutY="426.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RAM:">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="997.0" layoutY="425.0" strokeType="OUTSIDE" strokeWidth="0.0" text="16GB">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="826.0" layoutY="521.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Archivos accedidos recientemente">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="849.0" layoutY="584.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EjerciciosRepaso.pdf">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="849.0" layoutY="618.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Matematicas.docx">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="849.0" layoutY="651.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Archivo.txt">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="819.0" layoutY="339.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Imagenes/discoDuro.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="21.0" fitWidth="21.0" layoutX="816.0" layoutY="373.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Imagenes/procesador.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="21.0" fitWidth="25.0" layoutX="816.0" layoutY="410.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Imagenes/ram.png" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="1015.0" layoutY="352.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GB">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="21.0" fitWidth="25.0" layoutX="821.0" layoutY="567.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Imagenes/Archivo2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="21.0" fitWidth="25.0" layoutX="821.0" layoutY="601.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Imagenes/Archivo2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="21.0" fitWidth="25.0" layoutX="821.0" layoutY="634.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Imagenes/Archivo2.png" />
+               </image>
+            </ImageView>
+            <ScrollPane fx:id="scrollPane_Cursos" layoutX="26.0" layoutY="109.0" prefHeight="553.0" prefWidth="757.0" style="-fx-background-color: #2D2D37;" visible="false">
+               <content>
+                  <AnchorPane fx:id="panelDeControl_Cursos" prefHeight="552.0" prefWidth="756.0" visible="false" />
+               </content>
+            </ScrollPane>
+            <AnchorPane layoutX="25.0" layoutY="690.0" prefHeight="25.0" prefWidth="757.0" style="-fx-background-color: #383E4A;">
+               <children>
+                  <Text fill="WHITE" layoutX="282.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Declivia. Todos los derechos reservados (C)" wrappingWidth="304.0">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <ScrollPane fx:id="scrollPane_Asignaturas" layoutX="26.0" layoutY="109.0" prefHeight="553.0" prefWidth="757.0" style="-fx-background-color: #2D2D37;" visible="false">
+               <content>
+                  <AnchorPane fx:id="panelDeControl_Asignaturas" prefHeight="552.0" prefWidth="756.0" visible="false" />
+               </content>
+            </ScrollPane>
+            <ScrollPane fx:id="scrollPane_Archivos" layoutX="26.0" layoutY="109.0" prefHeight="553.0" prefWidth="757.0" style="-fx-background-color: #2D2D37;" visible="false">
+               <content>
+                  <AnchorPane fx:id="panelDeControl_Archivos" prefHeight="552.0" prefWidth="756.0" visible="false" />
+               </content>
+            </ScrollPane>
+            <JFXButton fx:id="crearElemento_curso" buttonType="RAISED" layoutX="811.0" layoutY="44.0" onAction="#crearCurso" prefHeight="30.0" prefWidth="177.0" style="-fx-background-color: #383E4A;" text="Crear Curso" textFill="#e9e9e9">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <ImageView fitHeight="29.0" fitWidth="39.0" layoutX="1002.0" layoutY="43.0" onMouseClicked="#infoInicio" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Imagenes/informacion.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <AnchorPane fx:id="crearCurso_Pane" layoutX="26.0" layoutY="106.0" prefHeight="567.0" prefWidth="757.0" style="-fx-background-color: #E9E9E9;" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="553.0" layoutX="2.0" layoutY="3.0" stroke="#2d2d37" strokeType="INSIDE" width="757.0" />
+                  <Text fill="#2d2d37" layoutX="38.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Crear un curso nuevo">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Text>
+                  <JFXTextField fx:id="nombreNuevoCurso" focusColor="#2d2d37" labelFloat="true" layoutX="41.0" layoutY="112.0" prefHeight="25.0" prefWidth="243.0" promptText="Nombre del nuevo curso" />
+                  <JFXTextArea fx:id="descripcionNuevoCurso" focusColor="#2d2d37" labelFloat="true" layoutX="40.0" layoutY="203.0" prefHeight="86.0" prefWidth="340.0" promptText="Descripción (opcional)" style="-fx-background-color: #E9E9E9;" />
+                  <JFXButton buttonType="RAISED" layoutX="40.0" layoutY="385.0" onAction="#crearCurso_Aceptar" prefHeight="25.0" prefWidth="138.0" style="-fx-background-color: #383E4A;" text="Aceptar" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="245.0" layoutY="385.0" onAction="#toCursos" prefHeight="25.0" prefWidth="138.0" ripplerFill="#ff000000" style="-fx-background-color: #E9E9E9; -fx-border-color: #383E4A;" text="Cancelar" textFill="#383e4a">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <JFXButton fx:id="crearElemento_asignatura" buttonType="RAISED" layoutX="810.0" layoutY="43.0" onAction="#crearAsignatura" prefHeight="30.0" prefWidth="177.0" style="-fx-background-color: #383E4A;" text="Crear Asignatura" textFill="#e9e9e9" visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="crearElemento_archivo" buttonType="RAISED" layoutX="810.0" layoutY="43.0" onAction="#crearArchivo" prefHeight="30.0" prefWidth="177.0" style="-fx-background-color: #383E4A;" text="Crear Archivo" textFill="#e9e9e9" visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <AnchorPane fx:id="crearAsignatura_Pane" layoutX="12.0" layoutY="102.0" prefHeight="567.0" prefWidth="757.0" style="-fx-background-color: #E9E9E9;" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="553.0" layoutX="14.0" layoutY="7.0" stroke="#2d2d37" strokeType="INSIDE" width="757.0" />
+                  <Text fill="#2d2d37" layoutX="38.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Crear nueva asignatura">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Text>
+                  <JFXTextField fx:id="nombreAsignaturaNueva" focusColor="#2d2d37" labelFloat="true" layoutX="41.0" layoutY="112.0" prefHeight="25.0" prefWidth="243.0" promptText="Nombre de la nueva asignatura" />
+                  <JFXTextArea fx:id="anotacionesAsignaturaNueva" focusColor="#2d2d37" labelFloat="true" layoutX="40.0" layoutY="333.0" prefHeight="86.0" prefWidth="340.0" promptText="Anotación (opcional)" style="-fx-background-color: #E9E9E9;" />
+                  <JFXButton buttonType="RAISED" layoutX="40.0" layoutY="479.0" onAction="#crearAsignatura_Aceptar" prefHeight="25.0" prefWidth="138.0" style="-fx-background-color: #383E4A;" text="Aceptar" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="245.0" layoutY="479.0" onAction="#toCursos" prefHeight="25.0" prefWidth="138.0" ripplerFill="#ff000000" style="-fx-background-color: #E9E9E9; -fx-border-color: #383E4A;" text="Cancelar" textFill="#383e4a">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXTextField fx:id="correoProfesorAsignaturaNueva" focusColor="#2d2d37" labelFloat="true" layoutX="38.0" layoutY="186.0" prefHeight="25.0" prefWidth="243.0" promptText="Correo del profesor (opcional)" />
+                  <JFXTextField fx:id="creditosAsignaturaNueva" focusColor="#2d2d37" labelFloat="true" layoutX="38.0" layoutY="259.0" prefHeight="25.0" prefWidth="243.0" promptText="Créditos de la asignatura (opcional)" />
+                  <JFXComboBox fx:id="dificultadComboBox" focusColor="#2d2d37" layoutX="574.0" layoutY="112.0" prefHeight="25.0" prefWidth="79.0" promptText="Dificultad">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXComboBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="crearArchivo_Pane" layoutX="12.0" layoutY="101.0" prefHeight="567.0" prefWidth="757.0" style="-fx-background-color: #E9E9E9;" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="553.0" layoutX="14.0" layoutY="7.0" stroke="#2d2d37" strokeType="INSIDE" width="757.0" />
+                  <Text fill="#2d2d37" layoutX="38.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Crear nuevo archivo">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Text>
+                  <JFXTextField fx:id="nombreArchivoNuevo" focusColor="#2d2d37" labelFloat="true" layoutX="41.0" layoutY="112.0" prefHeight="25.0" prefWidth="243.0" promptText="Nombre del nuevo archivo" />
+                  <JFXTextArea fx:id="descripcionArchivoNuevo" focusColor="#2d2d37" labelFloat="true" layoutX="40.0" layoutY="310.0" prefHeight="86.0" prefWidth="340.0" promptText="Descripción (opcional)" style="-fx-background-color: #E9E9E9;" />
+                  <JFXButton buttonType="RAISED" layoutX="40.0" layoutY="479.0" onAction="#crearArchivo_Aceptar" prefHeight="25.0" prefWidth="138.0" style="-fx-background-color: #383E4A;" text="Aceptar" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="245.0" layoutY="479.0" onAction="#toCursos" prefHeight="25.0" prefWidth="138.0" ripplerFill="#ff000000" style="-fx-background-color: #E9E9E9; -fx-border-color: #383E4A;" text="Cancelar" textFill="#383e4a">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXTextField fx:id="rutaArchivoNuevo" focusColor="#2d2d37" labelFloat="true" layoutX="38.0" layoutY="213.0" prefHeight="25.0" prefWidth="243.0" promptText="Ruta del archivo" />
+                  <JFXButton buttonType="RAISED" layoutX="302.0" layoutY="213.0" onAction="#buscarArchivo" prefHeight="27.0" prefWidth="79.0" ripplerFill="WHITE" style="-fx-background-color: #2BA6B7; -fx-border-color: #2D2D37;" text="Buscar" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <ScrollPane fx:id="scrollPane_Usuarios" layoutX="25.0" layoutY="111.0" prefHeight="553.0" prefWidth="757.0" style="-fx-background-color: #2D2D37;" visible="false">
+               <content>
+                  <AnchorPane fx:id="panelDeControl_Usuarios" prefHeight="552.0" prefWidth="756.0" visible="false" />
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="destacadoPane" layoutX="200.0" layoutY="49.0" prefHeight="743.0" prefWidth="1060.0" style="-fx-background-color: #E9E9E9;" visible="false">
+         <children>
+            <Text fill="#2d2d37" layoutX="37.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Destacado">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+            <JFXTextField editable="false" focusColor="#2d2d37" focusTraversable="false" layoutX="25.0" layoutY="59.0" prefHeight="25.0" prefWidth="1010.0">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </JFXTextField>
+            <ImageView fitHeight="29.0" fitWidth="39.0" layoutX="1006.0" layoutY="43.0" onMouseClicked="#infoInicio" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Imagenes/informacion.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Text fill="#eb0505" layoutX="194.0" layoutY="292.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ESTO FUNCIONARÁ PROXIMAMENTE">
+               <font>
+                  <Font size="39.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="controlPane" layoutX="200.0" layoutY="49.0" prefHeight="741.0" prefWidth="1060.0" style="-fx-border-color: #E9E9E9;" stylesheets="@../../StyleSheets/sytle.css" visible="false">
+         <children>
+            <Text fill="#2d2d37" layoutX="37.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Control">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+            <JFXTextField editable="false" focusColor="#2d2d37" focusTraversable="false" layoutX="25.0" layoutY="59.0" prefHeight="25.0" prefWidth="1010.0">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </JFXTextField>
+            <ImageView fitHeight="29.0" fitWidth="39.0" layoutX="1004.0" layoutY="39.0" onMouseClicked="#infoInicio" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Imagenes/informacion.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <AreaChart fx:id="pruebaArea" layoutX="25.0" layoutY="111.0" legendVisible="false" prefHeight="280.0" prefWidth="709.0" style="-fx-border-color: #383E4A;">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </AreaChart>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="609.0" layoutX="758.0" layoutY="111.0" stroke="BLACK" strokeType="INSIDE" width="277.0" />
+            <BarChart fx:id="numFiles_Control" layoutX="756.0" layoutY="111.0" legendVisible="false" prefHeight="602.0" prefWidth="277.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </BarChart>
+            <JFXComboBox fx:id="cursos_Control" focusColor="#2d2d37" layoutX="758.0" layoutY="39.0" onAction="#changeControlCourse" prefHeight="25.0" prefWidth="210.0" promptText="Seleccione un curso">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXComboBox>
+            <PieChart fx:id="pieChartSubjects" layoutX="25.0" layoutY="406.0" legendVisible="false" prefHeight="315.0" prefWidth="363.0" style="-fx-border-color: #2D2D37;" />
+            <Circle fill="#e9e9e9" layoutX="207.0" layoutY="564.0" radius="69.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+            <Text fill="#2d2d37" layoutX="402.0" layoutY="487.0" strokeType="OUTSIDE" strokeWidth="0.0" text="En base a tu actividad te ">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+            <Text fill="#2d2d37" layoutX="402.0" layoutY="514.0" strokeType="OUTSIDE" strokeWidth="0.0" text="recomendamos encarecidamente">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+            <Text fill="#2d2d37" layoutX="402.0" layoutY="542.0" strokeType="OUTSIDE" strokeWidth="0.0" text="estudiar:">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+            <AnchorPane fx:id="paneAsignaturaRecomendada" layoutX="416.0" layoutY="550.0" prefHeight="156.0" prefWidth="313.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

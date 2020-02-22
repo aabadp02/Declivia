@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="layoutLogin" prefHeight="350.0" prefWidth="808.0" style="-fx-background-color: #e8e4e4;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="declivia.controlador.ControladorLogin">
+    <children>
+      <AnchorPane fx:id="layoutDeclivia" prefHeight="483.0" prefWidth="296.0" style="-fx-background-color: #2D2D37;">
+         <children>
+            <Text fill="#e8e4e4" layoutX="97.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DECLIVIA" wrappingWidth="116.0">
+               <font>
+                  <Font name="Consolas" size="24.0" />
+               </font>
+            </Text>
+            <Text fill="#e8e4e4" layoutX="83.0" layoutY="342.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Empowering People" wrappingWidth="144.8671875">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text fill="#e8e4e4" layoutX="14.0" layoutY="465.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Todos los derechos reservados (C)" />
+            <ImageView fitHeight="162.0" fitWidth="151.0" layoutX="78.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Imagenes/logoDeclivia.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="registerLogin" layoutX="113.0" layoutY="366.0" onAction="#switchView" text="Regístrate" textFill="#e8e4e4" underline="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children></AnchorPane>
+      <Text fx:id="loginText" fill="#313040" layoutX="333.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOGIN" wrappingWidth="88.13671875">
+         <font>
+            <Font name="Consolas" size="25.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="username" focusColor="#40303c" labelFloat="true" layoutX="413.0" layoutY="154.0" prefHeight="25.0" prefWidth="296.0" promptText="Username" unFocusColor="#313040" />
+      <JFXPasswordField fx:id="password" focusColor="#40303c" labelFloat="true" layoutX="413.0" layoutY="229.0" prefHeight="25.0" prefWidth="296.0" promptText="Password" unFocusColor="#313040" />
+      <JFXButton fx:id="enterButton" buttonType="RAISED" layoutX="497.0" layoutY="323.0" onAction="#login" prefHeight="40.0" prefWidth="129.0" style="-fx-background-color: #313040;" text="Entrar" textFill="#e8e4e4">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <ImageView fx:id="facebook_login" fitHeight="40.0" fitWidth="40.0" layoutX="606.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Imagenes/logoFacebook.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="instagram_login" fitHeight="40.0" fitWidth="40.0" layoutX="669.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Imagenes/logoInstagram.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="twitter_login" fitHeight="40.0" fitWidth="40.0" layoutX="541.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Imagenes/logoTwitter.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="errorAutenticacion" layoutX="474.0" layoutY="284.0" text="Usuario o contraseña incorrectos" textFill="#e40404" visible="false" />
+      <Text fx:id="registerText" fill="#313040" layoutX="377.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="REGISTER" visible="false" wrappingWidth="116.0">
+         <font>
+            <Font name="Consolas" size="25.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="twitter_register" fitHeight="40.0" fitWidth="40.0" layoutX="94.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../Imagenes/logoTwitter.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="facebook_register" fitHeight="40.0" fitWidth="40.0" layoutX="156.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../Imagenes/logoFacebook.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="instagram_register" fitHeight="40.0" fitWidth="40.0" layoutX="218.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../Imagenes/logoInstagram.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="username_register" focusColor="#40303c" labelFloat="true" layoutX="101.0" layoutY="156.0" prefHeight="25.0" prefWidth="296.0" promptText="Username" unFocusColor="#313040" visible="false" />
+      <JFXPasswordField fx:id="password_register" focusColor="#40303c" labelFloat="true" layoutX="101.0" layoutY="231.0" prefHeight="25.0" prefWidth="296.0" promptText="Password" unFocusColor="#313040" visible="false" />
+      <JFXTextField fx:id="email" focusColor="#40303c" labelFloat="true" layoutX="101.0" layoutY="303.0" prefHeight="25.0" prefWidth="296.0" promptText="E-Mail" unFocusColor="#313040" visible="false" />
+      <JFXButton fx:id="registerButton" buttonType="RAISED" layoutX="174.0" layoutY="394.0" onAction="#register" prefHeight="40.0" prefWidth="129.0" style="-fx-background-color: #313040;" text="Registrarse" textFill="#e8e4e4" visible="false">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Text fx:id="userExistsText" fill="#f50000" layoutX="141.0" layoutY="368.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ya existe un usuario con ese nombre" visible="false" />
+      <Text fx:id="faltaNombre" fill="#f50000" layoutX="118.0" layoutY="367.0" strokeType="OUTSIDE" strokeWidth="0.0" text="El campo &quot;Username&quot; no puede quedar vacío" visible="false" />
+      <Text fx:id="faltaContrasenia" fill="#f50000" layoutX="119.0" layoutY="366.0" strokeType="OUTSIDE" strokeWidth="0.0" text="El campo &quot;Password&quot; no puede quedar vacío" visible="false" />
+      <Text fx:id="usuarioCreado" fill="#018d01" layoutX="173.0" layoutY="375.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuario creado con éxito" visible="false" />
+      <Label fx:id="forgotPassword" layoutX="501.0" layoutY="398.0" text="Forgot yout password?" textFill="#2d2d37" underline="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <AnchorPane fx:id="forgotPasswordPane" layoutX="296.0" layoutY="-483.0" prefHeight="483.0" prefWidth="512.0" style="-fx-background-color: #e8e4e4;">
+         <children>
+            <Text fill="#313040" layoutX="142.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FORGOT PASSWORD" wrappingWidth="253.13671875">
+               <font>
+                  <Font name="Consolas" size="25.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="username_forgotPassword" focusColor="#40303c" labelFloat="true" layoutX="102.0" layoutY="153.0" prefHeight="25.0" prefWidth="296.0" promptText="Username" unFocusColor="#313040" />
+            <JFXPasswordField fx:id="newPassword" focusColor="#40303c" labelFloat="true" layoutX="102.0" layoutY="228.0" prefHeight="25.0" prefWidth="296.0" promptText="New Password" unFocusColor="#313040" />
+            <JFXButton fx:id="aceptar" buttonType="RAISED" layoutX="102.0" layoutY="380.0" onAction="#aceptar" prefHeight="40.0" prefWidth="129.0" style="-fx-background-color: #313040;" text="Aceptar" textFill="#e8e4e4">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXPasswordField fx:id="repeatNewPassword" focusColor="#40303c" labelFloat="true" layoutX="102.0" layoutY="305.0" prefHeight="25.0" prefWidth="296.0" promptText="Código enviado" unFocusColor="#313040" />
+            <JFXButton fx:id="cancelar" buttonType="RAISED" layoutX="269.0" layoutY="380.0" onAction="#cancelarNewPassword" prefHeight="40.0" prefWidth="129.0" ripplerFill="#ee0000" style="-fx-border-color: #313040; -fx-background-color: #e8e4e4;" text="Cancelar" textFill="#313040">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Text layoutX="67.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Te hemos enviado un código al correo. Escríbelo para cambiar tu contraseña" />
+            <Text fx:id="camposVacios" fill="RED" layoutX="167.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ningún campo puede quedar vacío" visible="false" />
+            <Text fx:id="contraseniaCreada" fill="#41a156" layoutX="163.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contraseña cambiada con éxito" visible="false" />
+         </children>
+      </AnchorPane>
+      <Text fx:id="faltaContrasenia1" fill="#f50000" layoutX="129.0" layoutY="376.0" strokeType="OUTSIDE" strokeWidth="0.0" text="El campo &quot;Password&quot; no puede quedar vacío" visible="false" />
+      <Text fx:id="faltaEmail" fill="#f50000" layoutX="129.0" layoutY="375.0" strokeType="OUTSIDE" strokeWidth="0.0" text="El campo &quot;Email&quot; no puede quedar vacío" visible="false" />
+      <Label fx:id="ponUsuario" layoutX="471.0" layoutY="284.0" text="Debes indicar tu nombre de usuario" textFill="#e40404" visible="false" />
+    </children>
+</AnchorPane>

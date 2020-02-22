@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="299.0" prefWidth="461.0" style="-fx-background-color: #E9E9E9;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="declivia.controlador.SettingsDecliviaController">
+   <children>
+      <AnchorPane prefHeight="67.0" prefWidth="461.0" style="-fx-background-color: #2D2D37;">
+         <children>
+            <Label fx:id="ajustes" layoutX="191.0" layoutY="16.0" onMouseClicked="#toAjustes" text="Ajustes" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="79.0" layoutY="64.0" prefHeight="235.0" prefWidth="10.0" style="-fx-background-color: #2D2D37;" />
+      <ImageView fitHeight="36.0" fitWidth="35.0" layoutX="22.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Imagenes/ajustesOscuro.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="cambiarNombre" layoutX="110.0" layoutY="177.0" onMouseClicked="#cambNombre" text="Cambiar nombre de usuario">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Label fx:id="cambiarCorreo" layoutX="110.0" layoutY="222.0" onMouseClicked="#cambCorreo" text="Cambiar correo electrónico">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Label fx:id="cambiarContrasenia" layoutX="110.0" layoutY="94.0" onMouseClicked="#cambContrasenia" text="Cambiar contraseña">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Label fx:id="copiaSeguridad" layoutX="110.0" layoutY="132.0" onMouseClicked="#copiaSeguridad" text="Copia de seguridad de la base de datos">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <AnchorPane fx:id="cambioNombre" layoutX="89.0" layoutY="68.0" prefHeight="228.0" prefWidth="371.0" style="-fx-background-color: #E9E9E9;" visible="false">
+         <children>
+            <Label layoutX="24.0" layoutY="18.0" text="Cambiar Nombre de Usuario">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="nuevoNombre" layoutX="24.0" layoutY="76.0" prefHeight="25.0" prefWidth="262.0" promptText="Nuevo nombre" />
+            <JFXPasswordField fx:id="contrasenia" layoutX="24.0" layoutY="123.0" prefHeight="25.0" prefWidth="262.0" promptText="Contraseña" />
+            <JFXButton layoutX="123.0" layoutY="189.0" onAction="#aceptarCambNombre" prefHeight="25.0" prefWidth="99.0" style="-fx-background-color: #2D2D37;" text="Aceptar" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Label layoutX="24.0" layoutY="46.0" text="Esta operación provocará el reinicio de la aplicación" textFill="RED">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="campoVacio_nombre" layoutX="95.0" layoutY="160.0" text="Ningún campo puede quedar vacío" textFill="RED" visible="false">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="contraseniaErronea" layoutX="119.0" layoutY="166.0" text="Contraseña incorrecta" textFill="RED" visible="false">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="cambioCorreo" layoutX="89.0" layoutY="66.0" prefHeight="228.0" prefWidth="371.0" style="-fx-background-color: #E9E9E9;" visible="false">
+         <children>
+            <Label layoutX="24.0" layoutY="18.0" text="Cambiar Correo Electrónico">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="nuevoCorreo" layoutX="24.0" layoutY="76.0" prefHeight="25.0" prefWidth="262.0" promptText="Nuevo email" />
+            <JFXPasswordField fx:id="contrasenia_email" layoutX="24.0" layoutY="123.0" prefHeight="25.0" prefWidth="262.0" promptText="Contraseña" />
+            <JFXButton layoutX="123.0" layoutY="189.0" onAction="#aceptarCambCorreo" prefHeight="25.0" prefWidth="99.0" style="-fx-background-color: #2D2D37;" text="Aceptar" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Label layoutX="24.0" layoutY="46.0" text="Esta operación provocará el reinicio de la aplicación" textFill="RED">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="campoVacio_correo" layoutX="95.0" layoutY="160.0" text="Ningún campo puede quedar vacío" textFill="RED" visible="false">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="contraseniaErronea_correo" layoutX="119.0" layoutY="166.0" text="Contraseña incorrecta" textFill="RED" visible="false">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="cambioContrasenia" layoutX="89.0" layoutY="68.0" prefHeight="228.0" prefWidth="371.0" style="-fx-background-color: #E9E9E9;" visible="false">
+         <children>
+            <Label layoutX="24.0" layoutY="18.0" text="Cambiar Contraseña">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <JFXPasswordField fx:id="contraseniaActual" layoutX="24.0" layoutY="123.0" prefHeight="25.0" prefWidth="262.0" promptText="Contraseña actual" />
+            <JFXButton layoutX="123.0" layoutY="189.0" onAction="#aceptarCambContrasenia" prefHeight="25.0" prefWidth="99.0" style="-fx-background-color: #2D2D37;" text="Aceptar" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Label layoutX="24.0" layoutY="46.0" text="Esta operación provocará el reinicio de la aplicación" textFill="RED">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="campoVacio_contrasenia" layoutX="95.0" layoutY="160.0" text="Ningún campo puede quedar vacío" textFill="RED" visible="false">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="contraseniaErronea_contrasenia" layoutX="119.0" layoutY="166.0" text="Contraseña incorrecta" textFill="RED" visible="false">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <JFXPasswordField fx:id="nuevaContrasenia" layoutX="25.0" layoutY="81.0" prefHeight="25.0" prefWidth="262.0" promptText="Nueva Contraseña" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="copiaSeguridadPane" layoutX="89.0" layoutY="69.0" prefHeight="228.0" prefWidth="371.0" style="-fx-background-color: #E9E9E9;" visible="false">
+         <children>
+            <Label layoutX="24.0" layoutY="18.0" text="Copia de seguridad de la base de datos">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <JFXPasswordField fx:id="contraseniaAdmin_Copia" layoutX="24.0" layoutY="89.0" prefHeight="25.0" prefWidth="262.0" promptText="Contraseña" />
+            <JFXButton layoutX="123.0" layoutY="189.0" onAction="#copiaSeguridad_Aceptar" prefHeight="25.0" prefWidth="99.0" style="-fx-background-color: #2D2D37;" text="Aceptar" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Label fx:id="campoVacio_contrasenia1" layoutX="95.0" layoutY="160.0" text="Ningún campo puede quedar vacío" textFill="RED" visible="false">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="contraseniaErronea_contrasenia1" layoutX="119.0" layoutY="166.0" text="Contraseña incorrecta" textFill="RED" visible="false">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
